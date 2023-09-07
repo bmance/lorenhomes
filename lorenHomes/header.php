@@ -65,8 +65,7 @@
 		<link rel="stylesheet" href="https://use.typekit.net/ltb2eqy.css" media="none" onload="this.media='all';">
 
 		<!-- GOOGLE MAPS API KEY -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpi03OVT5qd-fLCF7KXY6Vq5ssvI86aGo" defer></script>
-		<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpi03OVT5qd-fLCF7KXY6Vq5ssvI86aGo&callback=initMap&libraries=&v=weekly" defer></script>-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=*****" defer></script>
 
 		<!-- FANCYBOX -->
 		<script async type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox.js"></script>
@@ -77,7 +76,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/js/slick/slick-theme.css"/>
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/slick/slick.js"></script>
 
-		<?php if(get_field('google_analytics','options')){ 
+		<?php if(get_field('google_analytics','options')){
 			$gaID = get_field('google_analytics','options');
 		?>
 
@@ -93,7 +92,7 @@
 
 		<?php }?>
 
-		<?php if(get_field('second_google_analytics_tracker','options')){ 
+		<?php if(get_field('second_google_analytics_tracker','options')){
 				$gaID2 = get_field('second_google_analytics_tracker','options');
 		?>
 
@@ -109,7 +108,7 @@
 
 		<?php }?>
 
-		<?php if(get_field('google_tag_manager_id','options')){ 
+		<?php if(get_field('google_tag_manager_id','options')){
 			$gtagID = get_field('google_tag_manager_id','options');
 		?>
 			<!-- Google Tag Manager -->
@@ -124,9 +123,9 @@
 
 		<!-- CUSTOM HEADER CODE -->
 		<?php if(get_field('custom_header_code','options')){?>
-		
+
 			<?php echo '<div class="invisContainer">'.get_field('custom_header_code','options').'</div>';?>
-		
+
 		<?php }?>
 		<!-- CUSTOM HEADER CODE -->
 
@@ -138,9 +137,9 @@
 
 		<!-- CUSTOM BODY CODE -->
 		<?php if(get_field('custom_body_code','options')){?>
-		
+
 			<?php echo '<div class="invisContainer">'.get_field('custom_body_code','options').'</div>';?>
-		
+
 		<?php }?>
 		<!-- CUSTOM BODY CODE -->
 
@@ -195,7 +194,7 @@
 			}
 
 			//REVEAL LOGO
-			$revealLogo = get_field('header_reveal_logo','options'); 
+			$revealLogo = get_field('header_reveal_logo','options');
 			$revealLogo = $revealLogo['url'];
 			if($revealLogo == '' || $revealLogo == NULL){
 				$revealLogo = $lrnhLogo;
@@ -203,20 +202,20 @@
 		?>
 
 		<header id="lrnHeader" class="<?php echo $hdClass;?> effect2">
-			
+
 			<div id="lhWrapper" class="rel">
 
 				<a href="<?php echo $homeUrl;?>" id="lrnLogoMbl">
-						
+
 					<img src="<?php echo $lrnhLogo;?>" alt="<?php echo $defaultAlt;?> Home Logo" title="<?php echo $defaultAlt;?> Home Logo" aria-label="<?php echo $defaultAlt;?> Logo" />
-						
+
 				</a>
 
 				<a href="<?php echo $homeUrl;?>" id="lrnLogoDsk">
-						
+
 					<img id="logoDft" class="<?php echo $logoClass;?>" src="<?php echo $revealLogo;?>" alt="<?php echo $defaultAlt;?> Home Logo" title="<?php echo $defaultAlt;?> Home Logo" aria-label="<?php echo $defaultAlt;?> Logo" />
 					<img id="logoRvl" class="<?php echo $logoClass;?>" src="<?php echo $lrnhLogo;?>" alt="<?php echo $defaultAlt;?> Home Logo" title="<?php echo $defaultAlt;?> Home Logo" aria-label="<?php echo $defaultAlt;?> Logo" />
-						
+
 				</a>
 
 				<a id="lmButton" href="javascript:mobileMenu();">
@@ -251,7 +250,7 @@
 		</header><!-- END OF TOPCONTAINER -->
 
 		<script type="text/javascript">
-			
+
 			var scroll = $(window).scrollTop();
 			var winWidth = $(window).width();  // WINDOW WIDTH
 			var winHeight = $(window).height(); // WINDOW HEIGHT
